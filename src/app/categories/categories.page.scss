@@ -1,0 +1,44 @@
+.categories {
+    ion-thumbnail {
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        float: left;
+    }
+    h1 {
+        color: black;
+        margin-left: 32%;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 2px;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    p {
+        color: black;
+        margin-left: 32%;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 2px;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    // ion-item {
+    //     min-height:100px;
+
+    // }
+    ion-label {
+        margin: 3%;
+    }
+    ion-card {
+        border-radius: 10px;
+        margin: 5%;
+        min-height: 13vh;
+    }
+    ion-card-header {
+        padding: 1%;
+    }
+    ion-card-content {
+        padding: 1%;
+    }
+}
