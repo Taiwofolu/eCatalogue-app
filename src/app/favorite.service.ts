@@ -13,7 +13,7 @@ export class FavoriteService {
       return result && result.indexOf(filmId) !== -1;
     });
   }
- 
+  
   favoriteFilm(filmId) {
     return this.getAllFavoriteFilms().then(result => {
       if (result) {
