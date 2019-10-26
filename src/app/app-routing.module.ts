@@ -6,8 +6,6 @@ import { CategoriesPage } from './categories/categories.page';
 import { SearchPage } from './search/search.page';
 import { ProductsPage } from './products/products.page';
 import { ProductPage } from './product/product.page';
-import { PostPage } from './post/post.page';
-import { PostsPage } from './posts/posts.page';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'  },
@@ -128,9 +126,7 @@ const routes: Routes = [
       }
     ]
   },
-  { path: 'account', component: AccountPage  },
-  { path: 'posts/:id', component: PostPage },
-  { path: 'posts', component: PostsPage },
+  { path: 'account', component: AccountPage  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

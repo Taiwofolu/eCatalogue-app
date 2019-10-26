@@ -35,8 +35,6 @@ import { SearchPage } from './search/search.page';
 import { AccountPage } from './account/account.page';
 import { ProductsPage } from './products/products.page';
 import { ProductPage } from './product/product.page';
-import { PostPage } from './post/post.page';
-import { PostsPage } from './posts/posts.page';
 import { IonicStorageModule } from '@ionic/storage';
 
 
@@ -56,8 +54,6 @@ export function createTranslateLoader(http: HttpClient) {
   AccountPage,
   ProductsPage,
   ProductPage,
-  PostPage,
-  PostsPage,
   ],
   entryComponents: [
   FilterPage,
