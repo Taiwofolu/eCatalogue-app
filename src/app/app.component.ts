@@ -28,19 +28,9 @@ export class AppComponent {
           icon: 'papilon-categories'
         },
         {
-          title: 'Favourites',
-          url: '/favourite',
-          icon: 'papilon-favourites'
-        },
-        {
           title: 'Search',
           url: '/search',
           icon: 'papilon-search'
-        },
-        {
-          title: 'News & Articles',
-          url: '/posts',
-          icon: 'papilon-new'
         },
         {
           title: 'Contact',

@@ -7,8 +7,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-//import { ScrollingModule } from '@angular/cdk/scrolling/ngx';
-//import { DragDropModule } from '@angular/cdk/drag-drop/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { AppRate } from '@ionic-native/app-rate/ngx';
@@ -27,18 +25,8 @@ import { KeysPipeModule } from '../app/pipes/pipe.module';
 import { HttpModule } from '@angular/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-//import { Braintree } from '@ionic-native/braintree/ngx';
 import { HomePage } from './home/home.page';
-
-
-//Uncomment when you use Google Login
-//import { GooglePlus } from '@ionic-native/google-plus/ngx';
-//import { Facebook } from '@ionic-native/facebook/ngx';
-
-
-//pages
 import { FilterPage } from '../app/filter/filter.page';
-import { OrderSummaryPage } from './checkout/order-summary/order-summary.page';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { CacheModule } from 'ionic-cache';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
@@ -47,15 +35,9 @@ import { SearchPage } from './search/search.page';
 import { AccountPage } from './account/account.page';
 import { ProductsPage } from './products/products.page';
 import { ProductPage } from './product/product.page';
-import { ReviewPage } from './review/review.page';
-import { Product } from './data/product';
-import { BlogPage } from './account/blog/blog.page';
-import { BlogsPage } from './account/blogs/blogs.page';
 import { PostPage } from './post/post.page';
 import { PostsPage } from './posts/posts.page';
 import { IonicStorageModule } from '@ionic/storage';
-import { FavoriteService } from './favorite.service';
-import { FavoritePage } from './favorite/favorite.page';
 
 
 
@@ -68,22 +50,17 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
   AppComponent,
   FilterPage,
-  OrderSummaryPage,
   HomePage,
   CategoriesPage,
   SearchPage,
   AccountPage,
   ProductsPage,
   ProductPage,
-  ReviewPage,
-  BlogsPage,
   PostPage,
   PostsPage,
-  FavoritePage
   ],
   entryComponents: [
   FilterPage,
-  OrderSummaryPage,
   HomePage,
   ],
   imports: [BrowserModule, 
@@ -107,11 +84,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     HomePage,
-    //Braintree,
-    //GooglePlus,
-    //Facebook,
     OneSignal,
-    FavoriteService,
     NativeStorage,
     InAppBrowser,
     FormBuilder,

@@ -6,8 +6,7 @@
     <ion-title style="font-weight: bold;">
       <!-- {{category.name}} -->
     </ion-title>
-    <!-- <ion-searchbar mode="ios" *ngIf="showSearch" [(ngModel)]="searchInput" (ionChange)="onInput()"></ion-searchbar> -->
-    <!-- <ion-buttons slot="end" (click)="getFilter()"><ion-icon name="funnel" style="margin: 0 8px;font-size: 23px"></ion-icon></ion-buttons> -->
+    <ion-searchbar mode="ios" *ngIf="showSearch" [(ngModel)]="searchInput" (ionChange)="onInput()"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -31,8 +30,6 @@
     <ion-card mode="md" class="ion-activatable ion-focusable hydrated {{settings.settings.product_shadow}}" [style.border-radius.px]="settings.dimensions.productBorderRadius">
       <ion-img alt="" [style.height.px]="settings.dimensions.productsGridViewHeight" (click)="getProduct(product)" *ngIf="product.images?.length" src="{{product.images[0].src}}"></ion-img>
       <ion-img alt="" [style.height.px]="settings.dimensions.productsGridViewHeight" (click)="getProduct(product)" *ngIf="!product.images?.length" src="assets/image/logo.png"></ion-img>
-      <!-- <ion-icon name="heart-empty" mode="md" class="wishlist-button-grid" *ngIf="!settings.wishlist[product.id]" (click)="settings.addToWishlist(product.id)"></ion-icon>
-      <ion-icon name="heart" color="{{settings.theme.button}}" mode="md" class="wishlist-button-grid" *ngIf="settings.wishlist[product.id]" (click)="settings.removeFromWishlist(product.id)"></ion-icon> -->
 
        <ion-button color="danger" class="stock" *ngIf="product.stock_status == 'outofstock'">{{"No Stock" | translate}}</ion-button>
       <div *ngIf="product.stock_status == 'instock'">
@@ -43,11 +40,6 @@
         <ion-card-subtitle mode="md">{{product.name}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content (click)="getProduct(product)" class="ion-activatable ion-focusable hydrated">
-        <!-- <p class="price">
-          <span class="regular-price" *ngIf="!product.sale_price">{{1*product.price | currency:settings.currency:symbol:'1.2-2'}}</span>
-          <span class="regular-price" *ngIf="product.sale_price">{{1*product.sale_price | currency:settings.currency:symbol:'1.2-2'}}</span>
-            <span *ngIf="product.sale_price" class="special-price"><del>{{1*product.regular_price | currency:settings.currency:symbol:'1.2-2'}}</del></span>
-        </p> -->
       </ion-card-content>
     </ion-card>
     </ion-col>

@@ -6,15 +6,12 @@ import { Data } from '../data';
 import { Settings } from '../data/settings';
 import { Product } from '../data/product';
 import { md5 } from './md5';
-import { ReviewPage } from '../review/review.page';
 import { AlertController } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Vendor } from '../data/vendor';
 import { TranslateService } from '@ngx-translate/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { HomePage } from '../home/home.page';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
-import { FavoriteService } from '../favorite.service';
 
 
 @Component({
@@ -46,25 +43,11 @@ export class ProductPage {
     // film: any;
     isFavorite = false;
     public navParams = new NavParams;
-    constructor(public translate: TranslateService, public favoriteService: FavoriteService, private photoViewer: PhotoViewer, public toastController: ToastController, private socialSharing: SocialSharing, public modalCtrl: ModalController, public api: ApiService, public data: Data, public productData: Product, public settings: Settings, public router: Router, public loadingController: LoadingController, public navCtrl: NavController, public alertController: AlertController, public route: ActivatedRoute, public vendor: Vendor, public iab: InAppBrowser) {
+    constructor(public translate: TranslateService, private photoViewer: PhotoViewer, public toastController: ToastController, private socialSharing: SocialSharing, public modalCtrl: ModalController, public api: ApiService, public data: Data, public productData: Product, public settings: Settings, public router: Router, public loadingController: LoadingController, public navCtrl: NavController, public alertController: AlertController, public route: ActivatedRoute, public vendor: Vendor, public iab: InAppBrowser) {
         this.filter.page = 1;
         this.quantity = "1";
         this.product = this.navParams.get('film');
-        this.favoriteService.isFavorite(this.productData.product.id).then(isFav => {
-        this.isFavorite = isFav;
-    })
     }
-    favoriteFilm() {
-        this.favoriteService.favoriteFilm(this.productData.product.id).then(() => {
-          this.isFavorite = true;
-        });
-      }
-     
-      unfavoriteFilm() {
-        this.favoriteService.unfavoriteFilm(this.productData.product.id).then(() => {
-          this.isFavorite = false;
-        });
-      }
     getReviewsPage() {
         this.navCtrl.navigateForward(this.router.url + '/review/' + this.product.id);
     }
