@@ -10,6 +10,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let fav of favs">
+      Hello
+    </ion-item>
+  </ion-list>
   <!-- <ion-list *ngIf="products">
     <ion-card mode="md" class="ion-activatable ion-focusable hydrated {{settings.settings.product_shadow}}" [style.border-radius.px]="settings.dimensions.productBorderRadius">
       <ion-img alt="" [style.height.px]="settings.dimensions.productsGridViewHeight" (click)="getProduct(product)" *ngIf="product.images?.length" src="{{product.images[0].src}}"></ion-img>

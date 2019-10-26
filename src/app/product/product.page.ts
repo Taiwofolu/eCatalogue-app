@@ -93,7 +93,9 @@ export class ProductPage {
         if (this.product.id) this.handleProduct();
         else this.getProduct();
         
-        console.log(this.productData.product.id);
+        console.log(this.data);
+        console.log(this.isFavorite);
+        console.log(this.productData);
     }
     handleProduct() {
 

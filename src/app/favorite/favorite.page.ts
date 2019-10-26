@@ -12,6 +12,8 @@ import { CacheService } from 'ionic-cache';
 import { FavoriteService } from '../favorite.service';
 import { Storage } from '@ionic/storage';
 
+const STORAGE_KEY = 'favoriteFilms';
+
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.page.html',
@@ -41,6 +43,11 @@ export class FavoritePage {
   //     this.product.product = product;
   //     this.navCtrl.navigateForward(this.router.url + '/product/' + product.id);
   // }
+
+  getAllFavoriteFilms() {
+    return this.storage.get(STORAGE_KEY);
+  }
+
   loadProducts() {
     this.loader = true;
     this.api.getItem('products', this.filter).subscribe(
@@ -49,7 +56,15 @@ export class FavoritePage {
         }, 
         err => {console.log(err);}
     );
-    console.log(this.storage.get('1040')); 
+    
+    this.getAllFavoriteFilms().then( function(res) {
+        const favs = res;
+        // res.indexOf();
+        console.log(favs);
+        console.log(favs.length);
+        
+    }); 
+    // console.log(items); 
 }
 
 getAttributes() {
@@ -63,6 +78,10 @@ getAttributes() {
 }
 
   ngOnInit() {
+
+    console.log(this.data);
+    console.log(this.product);
+    console.log(this.products);
     console.log(this.data);
     this.loadProducts();
     this.getAttributes();

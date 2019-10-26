@@ -68,7 +68,7 @@ export class ProductsPage {
             err => {console.log(err);}
         );
         console.log('Finished loading products');
-        console.log(this.filter); 
+        console.log(this.data); 
     }
 
     getAttributes() {
