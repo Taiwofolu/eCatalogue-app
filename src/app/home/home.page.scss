@@ -155,7 +155,14 @@ ion-card-subtitle {
         white-space: nowrap;
         position: relative;
         z-index: 0;
+            
+        .header-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            text-transform: none;
+        }
         .product-scroll {
+  
             padding-bottom: 5px;
             .scroller {
                 padding: 0px 4px 15px 4px;

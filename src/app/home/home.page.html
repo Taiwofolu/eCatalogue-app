@@ -228,9 +228,10 @@
 
       </div>
 
+    <!-- Featured products-->>
     <div *ngIf="data.blocks.featured?.length" class="related-products">
-        <ion-list-header>
-        <ion-label>{{"Featured Products" | translate}}</ion-label>
+      <ion-list-header>
+      <ion-label>{{"Featured Products" | translate}}</ion-label>
       </ion-list-header>
       <div class="scroll-related-products">
           <div class="product" *ngFor="let item of data.blocks.featured" [style.width.px]="settings.dimensions.homeSliderWidth">
