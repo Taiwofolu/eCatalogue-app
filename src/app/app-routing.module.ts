@@ -6,6 +6,7 @@ import { CategoriesPage } from './categories/categories.page';
 import { SearchPage } from './search/search.page';
 import { ProductsPage } from './products/products.page';
 import { ProductPage } from './product/product.page';
+import { MapPage } from './map/map.page';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'  },
@@ -126,7 +127,8 @@ const routes: Routes = [
       }
     ]
   },
-  { path: 'account', component: AccountPage  }
+  { path: 'account', component: AccountPage  },
+  { path: 'map', component: MapPage  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

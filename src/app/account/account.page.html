@@ -59,7 +59,7 @@
             <ion-icon name="arrow-forward" mode="ios" color="medium"></ion-icon>
         </ion-item>
 
-        <ion-item lines="inset" (click)="goTo('tabs/account/map')" class="ion-activatable" *ngIf="settings.settings?.switchLocations">
+        <ion-item lines="inset" (click)="goTo('/map')" class="ion-activatable" *ngIf="settings.settings?.switchLocations">
             <ion-icon class="icon-start ion-margin-end" name="compass" slot="start"></ion-icon>
             <ion-label>{{"Locations" | translate}}</ion-label>
             <ion-icon name="arrow-forward" mode="ios" color="medium"></ion-icon>

@@ -10,7 +10,7 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
 
 
 @Component({
-    selector: 'app-account',
+    selector: 'app-account', 
     templateUrl: 'account.page.html',
     styleUrls: ['account.page.scss']
 })

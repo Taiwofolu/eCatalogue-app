@@ -36,11 +36,14 @@ export class ApiService {
 
 	getItem(endPoint, filter = {}){
 		const url = this.config.setUrl('GET', '/wp-json/wc/v3/' + endPoint + '?', filter);
+		//  + '[orderby]=date&order=asc'
 		let cacheKey = url;
 		let pageReq = this.http.get(url).pipe(
 		    tap(_ => {}),
 		    catchError(this.handleError(endPoint))
 		);
+		
+		// console.log(url);
 		return this.cache.loadFromObservable(cacheKey, pageReq);
 	}
 

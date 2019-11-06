@@ -62,13 +62,16 @@ export class ProductsPage {
     getProducts() {
         this.loader = true;
         this.api.getItem('products', this.filter).subscribe(
-            res => {this.products = res;
+            res => { 
+                this.products = res;
                 this.loader = false;
+                console.log(this.products.reverse()); 
             }, 
+            
             err => {console.log(err);}
         );
-        console.log('Finished loading products');
-        console.log(this.data); 
+        // console.log('Finished loading products');
+        // console.log(this.data); 
     }
 
     getAttributes() {
