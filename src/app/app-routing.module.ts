@@ -7,6 +7,7 @@ import { SearchPage } from './search/search.page';
 import { ProductsPage } from './products/products.page';
 import { ProductPage } from './product/product.page';
 import { MapPage } from './map/map.page';
+import { AboutPage } from './about/about.page';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'  },
@@ -128,6 +129,7 @@ const routes: Routes = [
     ]
   },
   { path: 'account', component: AccountPage  },
+  { path: 'about', component: AboutPage  },
   { path: 'map', component: MapPage  },
 ];
 @NgModule({

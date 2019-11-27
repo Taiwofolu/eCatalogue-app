@@ -262,7 +262,7 @@ export class ProductPage {
         this.productData.product = {};
     }
     share(){
-        var receiver =  "+2347088225854"
+        var receiver =  "+2348129970294"
         var message = "Hi, I would like to enquire about the " + this.product.name
         this.socialSharing.shareViaWhatsAppToReceiver(receiver, message);
     }
@@ -276,15 +276,8 @@ export class ProductPage {
             copyToReference: true, // default is false
 
         };
-
-        // let toast = await this.toastController.create ({
-        //     position: 'top',
-        //     message: link,
-        //     duration: 10000
-        // });
-        // toast.present();
         console.log(link);
-        // }
+        
         this.photoViewer.show( link , this.product.name , options);
     }
     getDetail(id) {

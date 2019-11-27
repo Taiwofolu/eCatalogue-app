@@ -27,6 +27,10 @@ export class HomePage {
         this.filter.page = 1;
         this.filter.status = 'publish';
     }
+    getProducts(id) {
+        // console.log(this.data.categories);
+        this.navCtrl.navigateForward('/categories/products/' + id);
+    }
     ngOnInit() {
         this.nativeStorage.getItem('blocks').then(data => {
             this.data.blocks = data.blocks;

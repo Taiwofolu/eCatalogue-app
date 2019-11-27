@@ -1,11 +1,38 @@
+
+// #papilon_home_categories{
+//     position: fixed;
+//     margin-top: 1000px;
+// }
 a.welcome-card ion-img {
     max-height: 35vh;
     overflow: hidden;
 }
 ion-card {
-    margin: 0;
-    height: 100%;
+    // margin: 0;
+    // height: 100%;
+    // background-color:rgb(255, 196, 68);
+    // background-color:rgb(255, 196, 68);
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 3%;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    .ion-thumbnail {
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        float: left;
+    }
+    .ion-card-content{
+        margin-left: 32%;
+        vertical-align: middle;
+    }
 }
+
 ion-card-title {
     font-size: 40px;
 }
@@ -33,6 +60,22 @@ ion-card-subtitle {
     font-size: small;
 }
 .blocks {
+    .ion-list{
+        ion-label {
+            margin: 3%;
+        }
+        ion-card {
+            border-radius: 10px;
+            margin: 5%;
+            min-height: 50vh;
+        }
+        ion-card-header {
+            padding: 1%;
+        }
+        ion-card-content {
+            padding: 1%;
+        }
+    }
     .banner_block {
         overflow: auto;
         white-space: nowrap;

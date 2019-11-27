@@ -37,6 +37,7 @@ import { ProductsPage } from './products/products.page';
 import { ProductPage } from './product/product.page';
 import { MapPage } from './map/map.page';
 import { IonicStorageModule } from '@ionic/storage';
+import { AboutPage } from './about/about.page';
 
 
 
@@ -55,7 +56,8 @@ export function createTranslateLoader(http: HttpClient) {
   AccountPage,
   ProductsPage,
   ProductPage,
-  MapPage
+  MapPage,
+  AboutPage
   ],
   entryComponents: [
   FilterPage,

@@ -61,6 +61,22 @@
 
         </div>
 
+        <!-- <ion-list> -->
+          <ion-row id="papilon_home_categories">
+          <ion-col *ngFor="let category of data.mainCategories" (click)="getProducts(category.id)" tappable size="6">
+          <ion-card  >
+            
+                <ion-thumbnail slot= 'start'>
+                  <ion-img alt="" src="{{category.image?.src}}"></ion-img>
+                </ion-thumbnail>
+                <ion-card-content>
+                    <h1  style="font-size:20px; font-weight: regular;" [innerHTML]="category.name"></h1>
+                </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+        <!-- </ion-list> -->
+
         <div *ngIf="children.block_type == 'product_block' && children.products?.length" [style.background-color]="children.bg_color" [style.margin]="children.margin" [style.padding]="children.padding" class="product-block">
         <div *ngIf="children.products?.length" class="header-title {{children.header_align}}" [style.color]="children.title_color">{{children.title}}</div>
         <!-- Products Scroll -->
@@ -228,7 +244,7 @@
 
       </div>
 
-    <!-- Featured products-->>
+    <!-- Featured products-->
     <div *ngIf="data.blocks.featured?.length" class="related-products">
       <ion-list-header>
       <ion-label>{{"Featured Products" | translate}}</ion-label>

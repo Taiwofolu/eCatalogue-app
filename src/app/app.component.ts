@@ -36,6 +36,11 @@ export class AppComponent {
           title: 'Contact',
           url: '/account',
           icon: 'papilon-person'
+        },
+        {
+          title: 'About',
+          url: '/about',
+          icon: 'papilon-new'
         }
       ];
     constructor(private nativeStorage: NativeStorage, public translateService: TranslateService, public platform: Platform, private cache: CacheService, private splashScreen: SplashScreen, private statusBar: StatusBar, private appMinimize: AppMinimize) {
