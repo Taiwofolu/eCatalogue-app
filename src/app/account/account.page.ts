@@ -69,7 +69,7 @@ export class AccountPage {
 
     callUs() {
 
-    this.callNumber.callNumber("07088225854", true)
+    this.callNumber.callNumber("08129970259", true)
         .then(res => console.log('Launched dialer!', res))
         .catch(err => console.log('Error launching dialer', err));
 

@@ -3,9 +3,9 @@
       <ion-buttons slot="start">
          <ion-back-button defaultHref="home"></ion-back-button>
       </ion-buttons>
-      <ion-title id="whatsapp_number">
+      <!-- <ion-title id="whatsapp_number">
          {{product?.name}}
-      </ion-title>
+      </ion-title> -->
       <!-- <ion-buttons slot="end" (click)="share()">
          <ion-icon name="logo-whatsapp" style="margin-right: 8px;font-size: 23px"></ion-icon>
       </ion-buttons> -->
@@ -41,11 +41,11 @@
          
          <ion-card *ngIf="product.description">
                <ion-card-header>
-                     <ion-card-title>
+                     <ion-card-title text-wrap>
                            {{product.name}}
                      </ion-card-title>
                </ion-card-header> 
-         <ion-card-content text-justify text-wrap [innerHTML]="product.description">
+         <ion-card-content  [innerHTML]="product.description">
          </ion-card-content>
          </ion-card>
 
@@ -55,11 +55,13 @@
          </ion-item> -->
       </div>
    </div>
+   <div class="fixed-parent">
+      <ion-button (click)="share()" class="whatsapp-button" color="success" size="large" expand="block" shape="round"  >
+      <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+      Request on Whatsapp
+      </ion-button>
+   </div>
 
-  <ion-button (click)="share()" color="success" style="position: fixed; bottom: 13px; width: 80vw; margin-left: 10vw; margin-right: 10vw;" size="large" expand="block" shape="round"  >
-  <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
-  Request on Whatsapp
-</ion-button>
 <!-- <ion-button (click)="share()" style="border-raduis:20px;" color="success" size="large" expand="block"  >
       <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
       Request on Whatsapp
