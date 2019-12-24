@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { Platform } from '@ionic/angular';
 import { Config } from '../config';
 import { TranslateService } from '@ngx-translate/core';
+import { CacheService } from 'ionic-cache';
 
 @Component({
     selector: 'app-home',
@@ -18,15 +19,23 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['home.page.scss']
 })
 export class HomePage {
+
+    productKey = 'productsGroup';
     tempProducts: any = [];
     filter: any = {};
     hasMoreItems: boolean = true;
     cart: any;
     slideOpts = { effect: 'flip', autoplay: true, parallax: true, loop: true, lazy: true };
-    constructor(private config: Config, public api: ApiService, private splashScreen: SplashScreen, public platform: Platform, public translateService: TranslateService, public data: Data, public settings: Settings, public product: Product, public loadingController: LoadingController, public router: Router, public navCtrl: NavController, public route: ActivatedRoute, private oneSignal: OneSignal, private nativeStorage: NativeStorage) {
+    constructor(private cache: CacheService, private config: Config, public api: ApiService, private splashScreen: SplashScreen, public platform: Platform, public translateService: TranslateService, public data: Data, public settings: Settings, public product: Product, public loadingController: LoadingController, public router: Router, public navCtrl: NavController, public route: ActivatedRoute, private oneSignal: OneSignal, private nativeStorage: NativeStorage) {
         this.filter.page = 1;
         this.filter.status = 'publish';
     }
+
+    invalidateCache()
+    {
+        this.cache.clearGroup(this.productKey);
+    }
+
     getProducts(id) {
         // console.log(this.data.categories);
         this.navCtrl.navigateForward('/categories/products/' + id);

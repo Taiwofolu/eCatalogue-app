@@ -15,6 +15,8 @@ const httpOptions = {
 })
 export class ApiService {
 
+	productKey = 'productsGroup';
+
   constructor(private http: HttpClient, private config: Config, private cache: CacheService) {}
 
 	private handleError<T> (operation = 'operation', result?: T) {
@@ -44,7 +46,7 @@ export class ApiService {
 		);
 		
 		// console.log(url);
-		return this.cache.loadFromObservable(cacheKey, pageReq);
+		return this.cache.loadFromObservable(cacheKey, pageReq, this.productKey);
 	}
 
 	deleteItem(endPoint, id){

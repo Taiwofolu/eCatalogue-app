@@ -3,10 +3,16 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
+      
     <ion-title style="font-weight: bold;">
         {{"Papilon Plastics" | translate}}
       <!-- <img src="assets/image/logo.png"> -->
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="invalidateCache()" (click)="doRefresh($event)">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
