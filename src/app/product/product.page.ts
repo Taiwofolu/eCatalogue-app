@@ -262,7 +262,7 @@ export class ProductPage {
         this.productData.product = {};
     }
     share(){
-        var receiver =  "+2348129970294"
+        var receiver =  "+2348129970359"
         var message = "Hi, I would like to enquire about the " + this.product.name
         this.socialSharing.shareViaWhatsAppToReceiver(receiver, message);
     }
