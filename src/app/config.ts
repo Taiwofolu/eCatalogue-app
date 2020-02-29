@@ -30,8 +30,8 @@ export class Config {
     constructor() {
 
         this.url = 'https://papilonplastics.com'; // Replace URL_PLACEHOLDER with you site url (http://example.com)
-        this.consumerKey = 'ck_93f1086a2bc02049f0064277d91ba807d6458e01'; //Replace CONSUMER_KEY_PLACEHOLDER with you site consumer_key
-        this.consumerSecret = 'cs_af016cd11d1e1d92a476539f4cbd8998df226c93'; //Replace CONSUMER_KEY_PLACEHOLDER with you site consumer_secret
+        this.consumerKey = 'ck_678b48723ae5decca8bcd843a4af16f26e6c6fbd'; //Replace CONSUMER_KEY_PLACEHOLDER with you site consumer_key
+        this.consumerSecret = 'cs_6d87a6d5d87dbdfe00ee013b64f7a0593bea9827'; //Replace CONSUMER_KEY_PLACEHOLDER with you site consumer_secret
         
         this.options.withCredentials = true;
         this.options.headers = {};
