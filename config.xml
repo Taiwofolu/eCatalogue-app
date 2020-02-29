@@ -90,7 +90,7 @@
         <icon height="196" src="resources/ios/icon/icon-98@2x.png" width="196" />
         <splash height="2436" src="resources/ios/splash/Default-2436h.png" width="1125" />
     </platform>
-    <engine name="android" spec="^6.3.0" />
+    <engine name="android" spec="^8.0.0" />
     <plugin name="cordova-plugin-apprate" spec="^1.4.0" />
     <plugin name="cordova-plugin-x-socialsharing" spec="^5.4.4" />
     <plugin name="cordova-plugin-appminimize" spec="^1.0.1" />
