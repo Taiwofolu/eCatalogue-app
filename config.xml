@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="papilon.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="papilon.app" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Papilon Plastics</name>
     <description>Papilon Plastics LTD eCatalogue mobile application</description>
-    <author email="hello@papilonplastics.com" href="http://papilonplastics.com.com/">Papilon Plastics team</author>
+    <author email="info@leoplast.net" href="http://papilonplastics.com/">Papilon Plastics team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
